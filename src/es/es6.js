@@ -56,3 +56,13 @@ function whereAmI(username, location) {
 const whereAmI = (username, location) => {
   if (username && location) ? "I am not lost" : "I am totally lost!";
 };
+
+
+//es7 - include
+const pets = ['cat', 'dog', 'bat'];
+pets.includes('dog');
+
+//es7 - exponential
+const square = (x) => x**2;
+const cube = (y) => y**3;
+console.log(square);
