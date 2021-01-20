@@ -1,3 +1,52 @@
+//async await - built on to of Promises 
+//promises
+movePlayer(100, 'Left')
+    .then( () => movePlayer(400, 'Left'))
+        .then( () => movePlayer(10, 'Right'))
+            .then( () => movePlayer(330, 'Left'))
+//async
+async function playerStart() {
+    const firstMove = await movePlayer(100, 'Left');
+    const secondMove = await movePlayer(400, 'Left');
+    const thirdMove = await movePlayer(10, 'Right');
+    const fourthMove =await movePlayer(330, 'Left')
+}
+
+//real life use
+fetch('https://jsonplaceholder.typicode.com/users')
+.then(resp => resp.json())
+.then(console.log)
+
+async function dataFetch() {
+    const resp = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await resp.json();
+    console.log(data);
+}
+dataFetch();
+//try this below - first without try catch thn make spell mitake in url and try again with try catch
+const urls = [
+    'https://jsonplaceholder.typicode.com/users',
+    'https://jsonplaceholder.typicode.com/posts',
+    'https://jsonplaceholder.typicode.com/albums'
+]
+
+const dataFetch2 = async function() {
+    try {
+        const [users, posts, albums] = await Promise.all(urls.map( url => 
+            fetch(url).then( resp => resp.json())
+        ))
+        console.log('users', users)
+        console.log('posts', posts)
+        console.log('albums', albums)
+    } catch(err) {
+        console.log('Oppps!!', err)
+    }
+}
+
+
+
+
+//String operation
 'turtle'.padStart(10);
 'turtle'.padEnd(10);
 //string padding method
