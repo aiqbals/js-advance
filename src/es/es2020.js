@@ -1,4 +1,26 @@
-//BigInt - new type in JS
+//old way
+const promiseOne = new Promise((resolve, reject) => 
+    setTimeout(resolve, 3000));
+const promiseOTwo = new Promise((resolve, reject) => 
+    setTimeout(reject, 3000));
+
+    Promise.all([promiseOne, promiseOTwo]).then(data => console.log(data))
+        .catch(e => console.log('something  failed!', e));
+
+//2020 way
+const promiseOne = new Promise((resolve, reject) => 
+    setTimeout(resolve, 3000));
+const promiseOTwo = new Promise((resolve, reject) => 
+    setTimeout(reject, 3000));
+
+Promise.allSettled([promiseOne, promiseOTwo]).then(data => console.log(data))
+    .catch(e => console.log('something  failed!', e));
+
+
+
+
+
+//new type in JS - BigInt 
 //if the value is more than Number.MAX_SAFE_INTEGER, we use bigint type 
 //9007199254740991
 typeof 1n;

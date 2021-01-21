@@ -31,7 +31,12 @@ const urls = [
 ]
 
 const dataFetch2 = async function() {
-    try {
+    try {/*         const users = await fetch('https://jsonplaceholder.typicode.com/users');
+        const usersd = users.json();
+        const posts = await fetch('https://jsonplaceholder.typicode.com/posts');
+        const postsd = users.json();
+        const albums = await fetch('https://jsonplaceholder.typicode.com/albums');
+        const albumsd = users.json(); */
         const [users, posts, albums] = await Promise.all(urls.map( url => 
             fetch(url).then( resp => resp.json())
         ))
