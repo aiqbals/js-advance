@@ -33,18 +33,15 @@ function largestOfArr(arr) {
 
     var max = [];
     arr.map( eachArr => {
-        //console.log (eachArr)
+        var maxItem = eachArr[0];
         eachArr.map( eachItem => {
-            let maxItem = eachItem[0];
-            //console.log (maxItem)
-            if(eachArr[eachItem] > maxItem) {
-                maxItem = eachArr[eachItem]
+            if(eachItem > maxItem) {
+                maxItem = eachItem
+                max.push(maxItem)
             }
-            console.log(maxItem)
-            //max.push(maxItem)
         })
     })
-    //return max;
+    return max;
 }
 
 largestOfArr([[4,5,1,3],[13,27,18,26],[32,35,37,39],[1000,1001,857,1]])
