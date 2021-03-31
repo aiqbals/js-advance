@@ -35,11 +35,10 @@ function largestOfArr(arr) {
     arr.map( eachArr => {
         var maxItem = eachArr[0];
         eachArr.map( eachItem => {
-            if(eachItem > maxItem) {
-                maxItem = eachItem
-                max.push(maxItem)
-            }
+            if(eachItem > maxItem)
+                maxItem = eachItem;
         })
+        max.push(maxItem);
     })
     return max;
 }
