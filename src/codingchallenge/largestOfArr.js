@@ -1,8 +1,8 @@
 function largestOfArr(arr) {
     if(arr === []) {
         return arr;
-    }
-    //check
+    } //check
+
     var maxes = [];
     for( var i=0; i<arr.length; i++) {
         var innerMax = maxItem(arr[i])
@@ -34,11 +34,11 @@ function largestOfArr(arr) {
     var max = [];
     arr.map( eachArr => {
         eachArr.map( eachItem => {
-            let maxItem = 0;
+            let maxItem = eachItem[0];
             if(eachItem > maxItem) {
                 maxItem = eachItem
             }
-            console.log(maxItem)
+            max.push(maxItem)
         })
     })
     return max;
