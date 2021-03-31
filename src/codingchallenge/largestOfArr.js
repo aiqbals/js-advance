@@ -1,5 +1,10 @@
-function largestOfArr() {
+function largestOfArr(arr1, arr2, arr3, arr4) {
+    if(arr1 === []) {
+        return arr1;
+    }
     //check
+
+    
 
 }
 
