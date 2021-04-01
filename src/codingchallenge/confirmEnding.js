@@ -40,15 +40,20 @@ function confirmEnding(str, target) {
  confirmEnding("Bastian", "n")
 
  //sol 4 - substr *******************
- var sentence = "My name is Azief";
- console.length(sentence.substr())
-
  function confirmEnding(str, target) {
     /*  if(str || target === "" || " "){
          return "invalid input"
      } *///check
      //return str.substr(-1) === target
      return str.substr(-target.length) === target
+
+ }
+ 
+ confirmEnding("Bastian", "an")
+
+ //sol 5 - slice *******************
+ function confirmEnding(str, target) {
+   return str.slice(-target.length) === target
 
  }
  
