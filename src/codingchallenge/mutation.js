@@ -3,10 +3,10 @@ function mutation(arr) {
 
     if(arr[0].toLowerCase().includes(arr[1].toLowerCase())) return true;
     /* for(var letter of secondtStr) {
-        if(firstStr.indexOf(letter) === -1) return false
+        if(!firstStr.includes(letter)) return false;
     } */ //works as well
-    
-    return false;
+
+    return true;
 }
 mutation(["hello", "hey"])
 
