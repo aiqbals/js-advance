@@ -1,8 +1,11 @@
 function mutation(arr) {
     if(arr.length <= 0 || arr.length === 1 || arr.length > 2) return 'it must have array length of 2';
 
-    if(arr[0].toLowerCase().includes(arr[1].toLowerCase()))
-    return true;
+    if(arr[0].toLowerCase().includes(arr[1].toLowerCase())) return true;
+    /* for(var letter of secondtStr) {
+        if(firstStr.indexOf(letter) === -1) return false
+    } */ //works as well
+    
     return false;
 }
 mutation(["hello", "hey"])
