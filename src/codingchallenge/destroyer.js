@@ -3,12 +3,6 @@ function destroyer(arr) {
     if(arr.length == 0) return arr;
     
     const args = Array.from(arguments)
-    //console.log(args);
-    /* arr.map(e => {
-        if(!arr.includes(arguments)) {
-            return rmv.push(arguments)
-        }
-    }) */
     args.splice(0,1);
     let target = args;
     let result = [];
