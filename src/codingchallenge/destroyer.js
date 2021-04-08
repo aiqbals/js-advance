@@ -29,7 +29,7 @@ function destroyer(arr) {
     
     const args = Array.from(arguments)
     args.splice(0,1);
-    let target = args;
+    let target = args; //rest of the array el after splice
     
     return arr.filter( e => {
         return target.indexOf(e) === -1;
