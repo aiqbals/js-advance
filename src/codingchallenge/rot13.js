@@ -8,6 +8,7 @@ function rot13(str) {
             solved += String.fromCharCode(asciiNum + 13);
         }
     }
+    return solved;
 }
 
 rot13("AZ")
