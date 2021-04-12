@@ -23,6 +23,7 @@ function convert2roman(num) {
         //console.log(romanToNum[key]) //value
         while(num >= romanToNum[key]) {
             roman += key;
+            num -= romanToNum[key];
         }
     }
 
