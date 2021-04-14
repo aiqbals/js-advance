@@ -3,10 +3,6 @@ function whatIsInAName(collection, source) {
 
     let keys = Object.keys(source);
     //console.log(keys)
-    /* Object.keys(collection).forEach( element => {
-        if(element.hasOwnProperty(keys)) 
-        return arr.push(element)
-    }) */
     return collection.filter( obj => {
         for(var key of keys) {
             //console.log(key)
