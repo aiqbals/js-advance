@@ -7,6 +7,15 @@ function translatePlgLatin(str) {
         tst = tst.concat(cons) + 'ay'
         break
     }
-    return  tst
+    return  tst.join("")
+}
+translatePlgLatin("consonant");
+
+//sol 2
+function translatePlgLatin(str) {
+    //check
+    var firstVal = str.match(/[aeiou]/);
+    console.log(firstVal)
+
 }
 translatePlgLatin("consonant");
