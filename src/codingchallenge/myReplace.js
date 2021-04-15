@@ -1,12 +1,13 @@
 function myReplace(str, before, after) {
     //check  
     const strAr = str.split(" ");
-    strAr.filter( e => {
+    return strAr.filter( e => {
+        const index = strAr.indexOf(before);
         if(e===before)
-        e.replace(after)
+        //console.log(strAr.indexOf(before))
+        return strAr.splice(index,1,after);
+        //e.replace(after)
     })
-    return strAr;
-
 }
 
 myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped")
