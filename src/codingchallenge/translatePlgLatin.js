@@ -14,8 +14,14 @@ translatePlgLatin("consonant");
 //sol 2
 function translatePlgLatin(str) {
     //check
+    
     var firstVal = str.match(/[aeiou]/);
-    console.log(firstVal)
+    //console.log(firstVal)
+    var firstvalPos = str.indexOf(firstVal);
 
+    if(firstvalPos > 0) {
+        return str.slice(firsvalpos) + str.slice(0, firstvalPos) + 'ay'
+    }
+    return str + 'way';
 }
 translatePlgLatin("consonant");
