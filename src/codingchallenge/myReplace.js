@@ -10,7 +10,7 @@ function myReplace(str, before, after) {
         if(e===before)
         strAr.splice(index,1,after)
     })
-    return strAr
+    return strAr.join(" ")
 }
 
 myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped")
@@ -27,7 +27,7 @@ function myReplace(str, before, after) {
         if(el==before)
         strAr.splice(strAr.indexOf(before), 1, after)
     }
-    return strAr
+    return strAr.join(" ")
 }
 
 myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped")
@@ -45,7 +45,7 @@ function myReplace(str, before, after) {
             words[i] = after
         }
     }
-    return words
+    return words.join(" ")
 }
 
 myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped")
