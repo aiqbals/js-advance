@@ -115,10 +115,13 @@ let toyota = new car('toyota');
 console.log(toyota.getModel());
 
 // 7. Function declaration vs function expression
-function car(model) {
-    this.model=model;
-} // declaring function in this way called function expression which get hoisted
+function car() {
+    console.log('function declaraion')
+} 
+// declaring function in this way called function expression which get hoisted
 
-let car = function(model) {
-    this.model = model;
-} // declaring function in this way called function expression which doesnt get hoisted
+let car = function() {
+    console.log('function expression')
+} 
+/* An annonymous funciton that is stored in a variable and declaring function in this way called 
+function expression which doesnt get hoisted */
