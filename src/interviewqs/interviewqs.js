@@ -145,9 +145,14 @@ multiple callback or nested callback function which make the code ugly, and hard
 simplify this thing, we use Promises.
 */
 
-// 8. setTimeOut()
+// 9. setTimeOut() what is the result
 setTimeout(function() {
     console.l('a')
 }, 0)
 console.log('b');
 console.log('c')
+
+// b c a cuz when we use setTimeOut, it becomse asycronous and has has to wait for everything on stack to be finised 
+
+
+// 9. What is closure and how do you use it
