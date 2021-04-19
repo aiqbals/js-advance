@@ -84,3 +84,8 @@ function  a() {
 }
 const sentence = a 'hi'
 console.log(sentence) // output: hello cuz hi would be ignored since fn doesnt take agruemnt 
+
+10. 
+//how to make all content of a web page editable
+//<div contenteditable="ture"> Hellow </div>
+document.body.contentEditable = true;
