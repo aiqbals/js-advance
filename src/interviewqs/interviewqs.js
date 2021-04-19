@@ -79,3 +79,18 @@ console.log(profile.firstname);
 console.log(window.firstname);
 /* will not work since inner fn is a regualer fn, not a constructor, it has its own this
 which ref to window object, and here is the perfect use of arrow fn */
+const profile = {
+    firstname: '',
+    lastname: '',
+    setName: function(name) {
+        let splitName = (n) => {
+            let nameArray = n.split(' ');
+            this.firstname = nameArray[0]
+            this.lastname = nameArray[1];
+        }
+        splitName(name)
+    }  
+}
+profile.setName('asif hq');
+console.log(profile.firstname); 
+// now this ref to profile obj cuz it doesnt have its own this, it auto sets to profile obj
