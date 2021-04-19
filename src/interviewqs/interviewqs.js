@@ -59,6 +59,9 @@ possible but not reccomended.
 */
 
 // 5. Use of arrow function?
+/* 
+-  
+*/
 const profile = {
     firstname: '',
     lastname: '',
@@ -72,4 +75,7 @@ const profile = {
     }  
 }
 profile.setName('asif hq');
-console.log(firstname);
+console.log(profile.firstname); 
+console.log(window.firstname);
+/* will not work since inner fn is a regualer fn, not a constructor, it has its own this
+which ref to window object, and here is the perfect use of arrow fn */
