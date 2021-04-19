@@ -106,11 +106,19 @@ it look into its parent properties.
 */ 
 let car = function(model) {
     this.model = model;
-} // declaring function in this way called function expression which doesnt get hoisted
-
+} 
 car.prototype.getModel = function() {
     return this.model;
 } // this protype is not part of car constructor basiclly, its outside and we can attact method to it
 
 let toyota = new car('toyota');
 console.log(toyota.getModel());
+
+// 7. Function declaration vs function expression
+function car(model) {
+    this.model=model;
+} // declaring function in this way called function expression which get hoisted
+
+let car = function(model) {
+    this.model = model;
+} // declaring function in this way called function expression which doesnt get hoisted
