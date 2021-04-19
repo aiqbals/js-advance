@@ -133,8 +133,21 @@ let carE = function() {
 function expression which doesnt get hoisted. Means cannt be called or execute before declaring fn
 - We run javascript in strict mode using 'use strict' to prevent hoisting while we convert the 
 code into old JS e.g. var. It has variable scope and works like variable. 
+- when you wanna pass a fn to another fn, you cannt pass fn declaration, so you have to use fn expr
 */
 
 
 
-// 8. Function declaration vs function expression
+// 8. What is promises and why do we use it?
+/* 
+- when we wanna make an async call which has to wait certain things to happen and we might have to use
+multiple callback or nested callback function which make the code ugly, and hard to read, debug. To 
+simplify this thing, we use Promises.
+*/
+
+// 8. setTimeOut()
+setTimeout(function() {
+    console.l('a')
+}, 0)
+console.log('b');
+console.log('c')
