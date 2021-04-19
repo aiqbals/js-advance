@@ -71,3 +71,16 @@ console.log(profile);
 7.
 console.log(Math.max()) 
 // -infinity cuz it start comparing wih the lowest value e.g. 1 if the equation is Math.max(1,2,4)
+
+8. // type casting
+console.log([] + []); // output: empty string
+console.log({} + []); // output: 
+console.log({} + {}); // output: 
+console.log(String([])) // output: empty string
+
+9.
+function  a() {
+    return 'hello';
+}
+const sentence = a 'hi'
+console.log(sentence) // output: hello cuz hi would be ignored since fn doesnt take agruemnt 
