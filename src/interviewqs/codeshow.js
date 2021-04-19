@@ -66,3 +66,8 @@ profile.name = 'Azief';
 profile.age = 3;
 
 console.log(profile);
+
+
+7.
+console.log(Math.max()) 
+// -infinity cuz it start comparing wih the lowest value e.g. 1 if the equation is Math.max(1,2,4)
