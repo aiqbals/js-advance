@@ -155,4 +155,40 @@ console.log('c')
 // b c a cuz when we use setTimeOut, it becomse asycronous and has has to wait for everything on stack to be finised 
 
 
-// 9. What is closure and how do you use it
+// 10. What is closure and how do you use it
+/* The ability of a fun to store a variable for further ref even after execution is called closure. Or
+A closure is a fn having access to the parent scope even after the prent fn has closed. */
+
+let a = function() { 
+    let i = 0; 
+    
+    return function() { 
+        i++; 
+        console.log(i);
+    }
+}
+let a2 = a()
+a2()
+let a3 = a()
+a3()
+
+
+let obj = function(){
+    let i = 0;
+
+    return {
+        setI(k) {
+            i = k;
+        },
+        getI() {
+            return i
+        }
+    }
+};
+
+let x = obj();
+let y = obj();
+x.setI(2);
+x.getI()
+y.setI(5);
+y.getI();
