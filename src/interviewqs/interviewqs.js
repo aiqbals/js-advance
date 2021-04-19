@@ -1,4 +1,7 @@
 // 1. diff between 'var' and 'let' keywords
+
+const { prototype } = require("parcel-bundler");
+
 /* 
 - var is in JS since the begning where let was introduced in es2015/es6. 
 for example, if someone doenst upgrade her browser for years, let wont 
@@ -59,9 +62,6 @@ possible but not reccomended.
 */
 
 // 5. Use of arrow function?
-/* 
--  
-*/
 const profile = {
     firstname: '',
     lastname: '',
@@ -94,3 +94,23 @@ const profile = {
 profile.setName('asif hq');
 console.log(profile.firstname); 
 // now this ref to profile obj cuz it doesnt have its own this, it auto sets to profile obj
+
+// 6. what is prototypal inheritance 
+/* 
+- Basically every Object has a property called prototype, where you can add methods and 
+properties to it. When you create other object from the created object, the newly created 
+object would automatically inherit the property of the parent but not by including its own
+propety, instead, it uses from its parent prototype prop and methods. The way it works, when
+you call a particular method of an object, it first look at its own properties, if not there,
+it look into its parent properties.
+*/ 
+let car = function(model) {
+    this.model = model;
+} // declaring function in this way called function expression which doesnt get hoisted
+
+car.prototype.getModel = function() {
+    return this.model;
+} // this protype is not part of car constructor basiclly, its outside and we can attact method to it
+
+let toyota = new car('toyota');
+console.log(toyota.getModel());
