@@ -1,4 +1,4 @@
-// diff between 'var' and 'let' keywords
+// 1. diff between 'var' and 'let' keywords
 /* 
 - var is in JS since the begning where let was introduced in es2015/es6. 
 for example, if someone doenst upgrade her browser for years, let wont 
@@ -17,3 +17,59 @@ let x = function(){
     console.log(v);
     console.log(l); // output: l is not defined
 }
+
+// 2. diff between '==' and '===' keywords
+/* 
+- They both are comparison operator if the left right is equel. But the diff is, == compares only values 
+(not the type) by converting the same type where as === check the type. 
+*/
+if('1' == 1) // true 
+if('1' === 1) // false 
+
+// 3. diff between 'let and 'const' keywords
+/* 
+- after the first assignment of value, reassging is not posible with const, but with let possible 
+- with const, array can be modified but not reassign. Thats why, wehn using array or obj, it is a
+good practice to use const not let so that I can not accidentally reassign value to it. 
+*/
+let l = 1;
+l =2;
+console.log(l)
+
+const c = 1;
+c = 2;
+console.log(c);
+//or
+const c; // when c is defined, by default its value is assinged as c = undefined
+c = 2;
+console.log(c);
+//with array 
+const c =[1,2]
+c.push(3);
+c = [6,4] // is not possible 
+console.log(c)
+
+// 4. diff between null and undefined
+/* 
+- Both represent empty value but the diff is, when we define a variable without assigning a value,
+it bydefault JS puts a placholder called undefined. But null we have to do it manually, not JS e.g.,
+if there is a value that needs to be cleared up, we set it to null. Manually putting undefined is
+possible but not reccomended.
+- typeof(undefined) = undefined but typeof(null) = object
+*/
+
+// 5. Use of arrow function?
+const profile = {
+    firstname: '',
+    lastname: '',
+    setName: function(name) {
+        let splitName = function(n){
+            let nameArray = n.split(' ');
+            this.firstname = nameArray[0]
+            this.lastname = nameArray[1];
+        }
+        splitName(name)
+    }  
+}
+profile.setName('asif hq');
+console.log(firstname);
