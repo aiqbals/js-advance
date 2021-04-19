@@ -114,6 +114,8 @@ car.prototype.getModel = function() {
 let toyota = new car('toyota');
 console.log(toyota.getModel());
 
+
+
 // 7. Function declaration vs function expression
 console.log(carD());
 console.log(carE());
@@ -128,7 +130,11 @@ let carE = function() {
 } 
 /* 
 - An annonymous funciton that is stored in a variable and declaring function in this way called 
-function expression which doesnt get hoisted 
+function expression which doesnt get hoisted. Means cannt be called or execute before declaring fn
 - We run javascript in strict mode using 'use strict' to prevent hoisting while we convert the 
-code into old JS e.g. var
+code into old JS e.g. var. It has variable scope and works like variable. 
 */
+
+
+
+// 8. Function declaration vs function expression
